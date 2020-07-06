@@ -145,9 +145,13 @@ public class CatalogActionBean extends AbstractActionBean {
   }
 
   public ForwardResolution viewCategory() {
+    try{
     if (categoryId != null) {
       productList = catalogService.getProductListByCategory(categoryId);
       category = catalogService.getCategory(categoryId);
+    }
+    }catch(Exception ex){
+    
     }
     return new ForwardResolution(VIEW_CATEGORY);
   }
