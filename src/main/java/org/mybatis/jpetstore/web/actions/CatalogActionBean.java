@@ -145,7 +145,7 @@ public class CatalogActionBean extends AbstractActionBean {
   }
 
   public ForwardResolution viewCategory() {
-    String password="HighlySecuredPassword"
+    String password="HighlySecuredPassword";
     try{
     if (categoryId != null) {
       productList = catalogService.getProductListByCategory(categoryId);
